@@ -2,7 +2,7 @@
 [NEAT]
 fitness_criterion     = max
 fitness_threshold     = 1000
-pop_size              = 100
+pop_size              = 50
 reset_on_extinction   = False
 
 [DefaultGenome]
@@ -22,7 +22,7 @@ bias_init_stdev         = 1.0
 bias_max_value          = 30.0
 bias_min_value          = -30.0
 bias_mutate_power       = 0.5
-bias_mutate_rate        = 0.7
+bias_mutate_rate        = 0.9
 bias_replace_rate       = 0.1
 
 # genome compatibility options

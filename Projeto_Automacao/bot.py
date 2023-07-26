@@ -30,34 +30,36 @@ pyautogui.press("tab")
 tabela = pd.read_csv("/home/edmurcn/Documentos/MeusProjetos/Analise_de_Dados/Projeto_Automacao/produtos.csv")
 
 linha = 0
-for linha in range(0,1):
-    
-    codigo = tabela.loc[linha, "codigo"]
-    pyautogui.write(str(codigo))
+for linha in tabela.index:
+
+    pyautogui.write(str(tabela.loc[linha, "codigo"]))
     pyautogui.press("tab")
 
-    marca = tabela.loc[linha, "marca"]
-    pyautogui.write(str(marca))
+    pyautogui.write(str(tabela.loc[linha, "marca"]))
     pyautogui.press("tab")
 
-    tipo = tabela.loc[linha, "tipo"]
-    pyautogui.write(str(tipo))
+    pyautogui.write(str(tabela.loc[linha, "tipo"]))
     pyautogui.press("tab")
 
-    categoria = tabela.loc[linha, "categoria"]
-    pyautogui.write(str(categoria))
+    pyautogui.write(str(tabela.loc[linha, "categoria"]))
     pyautogui.press("tab")
 
-    preco = tabela.loc[linha, "preco_unitario"]
-    pyautogui.write(str(preco))
+    pyautogui.write(str(tabela.loc[linha, "preco_unitario"]))
     pyautogui.press("tab")
 
-    custo = tabela.loc[linha, "custo"]
-    pyautogui.write(str(custo))
+    pyautogui.write(str(tabela.loc[linha, "custo"]))
     pyautogui.press("tab")
 
-    observacao = tabela.loc[linha, "obs"]
-    pyautogui.write(str(observacao))
+    if not pd.isna(tabela.loc[linha, "obs"]):
+        pyautogui.write(str(tabela.loc[linha, "obs"]))
 
+    pyautogui.press("tab")
     pyautogui.press("enter")
+
+    pyautogui.scroll(500)
+    pyautogui.click(x = 966, y = 285)
+
+
+
+
 
