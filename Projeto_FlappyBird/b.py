@@ -4,6 +4,7 @@ import neat
 
 ai_jogando = True
 
+
 geracao = 0
 TELA_LARGURA = 500
 TELA_ALTURA = 800
@@ -17,7 +18,7 @@ IMAGENS_PASSARO = [
     pygame.transform.scale2x(pygame.image.load('/home/edmurcn/Documentos/MeusProjetos/Analise_de_Dados/Projeto_FlappyBird/imgs/bird3.png')),
 ]
 
-pygame.font.init()
+pygame.font.init() 
 FONTE_PONTOS = pygame.font.SysFont('arial', 40)
 
 
